@@ -1,4 +1,4 @@
-<img width="1470" height="929" alt="Screenshot 2026-04-20 111455" src="https://github.com/user-attachments/assets/ac97d0cf-59f0-4067-a72d-a804a32a89ff" />
+
 # Drone-Vehicle-Tracking-Speed-Estimation
 
 # Introduction Générale
