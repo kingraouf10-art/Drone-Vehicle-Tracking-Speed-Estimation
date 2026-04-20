@@ -1,0 +1,12 @@
+# AI and Computer Vision
+ultralytics
+opencv-python
+numpy
+
+# Deep Learning Framework
+torch
+torchvision
+torchaudio
+
+# Utilities
+matplotlib
