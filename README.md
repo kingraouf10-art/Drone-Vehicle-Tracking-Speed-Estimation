@@ -1,3 +1,4 @@
+<img width="1470" height="929" alt="Screenshot 2026-04-20 111455" src="https://github.com/user-attachments/assets/ac97d0cf-59f0-4067-a72d-a804a32a89ff" />
 # Drone-Vehicle-Tracking-Speed-Estimation
 
 # Introduction Générale
@@ -30,6 +31,9 @@ Le coefficient de confiance agit comme un filtre de précision. Nous avons fixé
 •	Rétention d'Objets : Maintenir une sensibilité suffisante pour détecter les voitures de couleur sombre ou celles situées en bordure de champ, là où la distorsion est la plus forte.
 <img width="1417" height="961" alt="Screenshot 2026-04-20 111424" src="https://github.com/user-attachments/assets/2820936c-8dd4-495b-b3cc-efc532a2c77d" />
 
+<img width="1470" height="929" alt="Screenshot 2026-04-20 111455" src="https://github.com/user-attachments/assets/7ce30483-e2af-41a1-b1e3-d8885eb47082" />
+
+
 # 3.	Analyse du Flux Optique
 
 # 3.1. Pourquoi l'algorithme de Farneback ?
@@ -53,6 +57,9 @@ L'un des plus grands défis de la vision par drone est le "bruit" environnementa
 
 <img width="1826" height="974" alt="Screenshot 2026-04-20 111802" src="https://github.com/user-attachments/assets/baa8201c-22e7-4bd1-a480-213dc18bb4d1" />
 
+
+<img width="1915" height="1003" alt="Screenshot 2026-04-20 111819" src="https://github.com/user-attachments/assets/c27f120b-54d6-4a5b-a9d7-0bd80bb5282b" />
+
 # 4.	Calibration MATLAB et Paramètres Optiques
 
 # 4.1. Pourquoi la calibration avec MATLAB ?
@@ -72,6 +79,13 @@ Les lentilles grand-angle utilisées sur les drones provoquent une distorsion ra
 •	Le problème : Les lignes droites (comme les bords d'une route) apparaissent courbes sur l'image brute. Plus un objet est loin du centre de l'image, plus il est "étiré" ou "compressé" par la lentille.
 •	La Solution (cv2.undistort) : En utilisant les coefficients de distorsion calculés par MATLAB, nous appliquons une transformation mathématique inverse pour "redresser" chaque pixel.
 •	Bénéfice : Cela garantit que la distance entre deux pixels est constante sur toute la surface de l'image. Sans cela, une voiture roulant à vitesse constante semblerait accélérer en s'approchant des bords de la vidéo.
+
+
+<img width="1917" height="1016" alt="Screenshot 2026-04-16 195117" src="https://github.com/user-attachments/assets/08ecde6c-3d0f-4fd4-9367-52eab734e441" />
+
+<img width="1406" height="998" alt="Screenshot 2026-04-16 195244" src="https://github.com/user-attachments/assets/b0618388-7d6e-46d6-850b-27de39c84fb0" />
+
+
 
 # 5.	Lois Physiques et Défis Techniques
 
@@ -115,6 +129,9 @@ En doublant la résolution d'entrée par rapport au standard (640), nous permett
 À grande distance, un "tremblement" (Jitter) de seulement 1 pixel dans la détection peut provoquer une erreur de vitesse de 10 km/h.
 o	Mécanisme : Nous utilisons un buffer deque de 20 frames. Le système calcule la moyenne pondérée de ces 20 dernières mesures.
 o	Résultat : Cela "gomme" les erreurs de mesure instantanées et fournit une courbe de vitesse stable et fluide, indispensable pour une application de surveillance crédible.
+
+<img width="625" height="479" alt="image" src="https://github.com/user-attachments/assets/b43c53e1-0b21-4c53-9001-a636021cc3f1" />
+
 
 <img width="1411" height="837" alt="Screenshot 2026-04-20 112804" src="https://github.com/user-attachments/assets/23e5a3c9-fd2c-47d2-856e-8d89a3e6b18b" />
 
